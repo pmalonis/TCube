@@ -7,8 +7,8 @@ cuda_default = torch.device("cuda:0")
 class T5FineTuner(pl.LightningModule):
 	def __init__(self):
 		super(T5FineTuner, self).__init__()
-		self.model = T5ForConditionalGeneration.from_pretrained('t5-base')
-		self.tokenizer = T5Tokenizer.from_pretrained('t5-base')
+		self.model = T5ForConditionalGeneration.from_pretrained('t5-small')
+		self.tokenizer = T5Tokenizer.from_pretrained('t5-small')
 
 		new_tokens = ['<H>', '<R>', '<T>']
 		new_tokens_vocab = {}
